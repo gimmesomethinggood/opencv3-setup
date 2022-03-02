@@ -1,5 +1,20 @@
+# Disable ipv6 before going further
+
+```bash
+add lines to /etc/sysctl.conf
+
+net.ipv6.conf.all.disable_ipv6=1
+net.ipv6.conf.default.disable_ipv6=1
+net.ipv6.conf.lo.disable_ipv6=1
+net.ipv6.conf.eth0.disable_ipv6=1
+
+Do sudo sysctl -p
+```
+
 ## Raspberry Pi Menu Driven OpenCV 3 Compile from Source Script
 #### Whiptail menu enabled script to help compile opencv3 from source
+
+
 
 ![cv3-install-menu](https://github.com/pageauc/opencv3-setup/blob/master/menu.png)
 
